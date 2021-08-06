@@ -1,0 +1,157 @@
+.header {
+    height: 120px;
+    background: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-list {
+    list-style-type: none;
+}
+
+.navbar-item {
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--white-color);
+    font-weight: 300;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.navbar-item-link {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.navbar-item--hover:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.navbar-item--strong{
+    font-weight: 400;
+}
+
+.navbar-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1rem;
+    background: #fb9086;
+    top: .5rem;
+    right: 0;
+}
+
+.navbar__link--show:hover .navbar__link{
+    display: block;
+}
+
+.navbar__link{
+    width: 10rem;
+    position: absolute;
+    left: .5rem;
+    top: 2rem;
+    background: var(--white-color);
+    border-radius: 1px;
+    padding: .25rem;
+    display: none;
+    animation: fadeIn ease .5s;
+}
+
+.navbar__link-QR img{
+    width: 100%;
+}
+
+.navbar__link-apps{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.navbar__link-apps img{
+    width: 45%;
+}
+
+.navbar__noti{
+    width: 20rem;
+    max-height: 20rem;
+    position: absolute;
+    top: 2rem;
+    right: .5rem;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.noti__header{
+    flex: 1 1;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.noti__header-title{
+    color: var(--text-color);
+    width: fit-content;
+    height: fit-content;
+    padding: .5rem;
+}
+
+.noti__container{
+    flex: 9 9;
+    overflow-y: auto;
+}
+
+.noti__item{
+    background: var(--primary-color-light);
+    display: flex;
+}
+
+.noti__list a:visited .noti__item{
+    background: #fff;
+}
+
+.noti__img{
+    flex: 1 1;
+}
+
+.noti__img img{
+    width: 100%;
+    height: auto;
+}
+
+.noti__content {
+    color: var(--black-color);
+    flex: 6 6;
+    display: flex;
+    flex-direction: column;
+}
+
+.noti__content-title{
+    padding: .25rem 0;
+    font-weight: 500;
+}
+
+.noti__content-desc{
+    padding: .25rem 0;
+    opacity: .8;
+    font-size: .85rem;
+}
+
+.noti__footer{
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.noti__footer a{
+    color: var(--black-color);
+    text-decoration: none;
+    font-weight: 500;
+}
