@@ -59,6 +59,7 @@
     border-radius: 1px;
     padding: .25rem;
     display: none;
+    transform-origin: top left;
     animation: fadeIn ease .5s;
 }
 
@@ -76,8 +77,14 @@
     width: 45%;
 }
 
+.navbar__log--show-noti:hover .navbar__noti{
+    display: flex;
+}
+
+
 .navbar__noti{
-    width: 20rem;
+    display: none;
+    width: 35rem;
     max-height: 20rem;
     position: absolute;
     top: 2rem;
@@ -85,8 +92,29 @@
     background-color: #fff;
     border: 1px solid #d3d3d3;
     border-radius: 2px;
-    display: flex;
     flex-direction: column;
+    transform-origin: top right;
+    animation: fadeIn ease .5s;
+}
+
+.navbar__noti::before{
+    content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 12px;
+    top: -29px;
+}
+
+.navbar__noti::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -9px;
+    width: 6rem;
+    height: .5rem;
 }
 
 .noti__header{
@@ -101,6 +129,7 @@
     width: fit-content;
     height: fit-content;
     padding: .5rem;
+    cursor: default;
 }
 
 .noti__container{
@@ -111,6 +140,7 @@
 .noti__item{
     background: var(--primary-color-light);
     display: flex;
+    align-items: center;
 }
 
 .noti__list a:visited .noti__item{
@@ -118,7 +148,7 @@
 }
 
 .noti__img{
-    flex: 1 1;
+    flex: 1rem;
 }
 
 .noti__img img{
@@ -128,7 +158,7 @@
 
 .noti__content {
     color: var(--black-color);
-    flex: 6 6;
+    flex: 6;
     display: flex;
     flex-direction: column;
 }
